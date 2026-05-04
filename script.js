@@ -73,11 +73,13 @@ if (logo) {
   });
 }
 // menutoogle
-document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links");
+window.addEventListener("load", function () {
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav-links");
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active"); 
-  });
+  if (toggle && nav) {
+    toggle.addEventListener("click", function () {
+      nav.classList.toggle("active");
+    });
+  }
 });
