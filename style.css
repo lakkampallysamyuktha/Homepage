@@ -75,36 +75,30 @@ body:not(.auth-page-body) {
 /* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
 
-  .logo img {
-    height: 35px;     
-  }
-
   .menu-toggle {
     display: block;
+    z-index: 10001;
   }
 
- 
+  .nav-links {
+    display: none;
+    flex-direction: column;
+
+    position: fixed;     /* ✅ IMPORTANT */
+    top: 70px;
+    left: 0;
+    width: 100%;
+
+    background: white;
+    padding: 20px 0;
+
+    z-index: 10000;      /* ✅ ABOVE NAVBAR */
+  }
 
   .nav-links.active {
     display: flex;
   }
 
-  .nav-links a {
-    padding: 12px;
-    display: block;
-    text-decoration: none;
-    color: #111;
-  }
-
-  .nav-links a:hover {
-    color: #2563eb;
-  }
-
- 
-  .nav-links a.active {
-    color: #2563eb;
-    font-weight: 600;
-  }
 }
 /* BUTTON */
 .btn {
